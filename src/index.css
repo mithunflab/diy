@@ -1,6 +1,7 @@
 @import 'virtual:uno.css';
+@import '../app/styles/index.scss';
 
-/* Additional styles if needed */
+/* Additional styles for Lovable compatibility */
 html {
   height: 100%;
 }
@@ -9,8 +10,30 @@ body {
   margin: 0;
   height: 100%;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
 #root {
   height: 100%;
+}
+
+/* Override any problematic styles */
+.modern-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.modern-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modern-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modern-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
 }
