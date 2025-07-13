@@ -1,0 +1,2 @@
+/* Import all existing styles from the app directory */
+@import "../app/styles/index.scss";
